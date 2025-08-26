@@ -48,7 +48,7 @@ function Header() {
           required
         >
           <option value="1">
-            en
+            
             <img src={en} />
           </option>
           <option value="0">
