@@ -12,54 +12,27 @@ function Header() {
     i18n.changeLanguage(i18n.language === "es" ? "en" : "es");
     setIdioma(e.target.value);
   };
-  const opciones = [
-    {
-      value: "en",
-      label: (
-        <div className="flex items-center gap-2">
-          <img src={en} className="w-5" />
-          EN
-        </div>
-      ),
-    },
-    {
-      value: "es",
-      label: (
-        <div className="flex items-center gap-2">
-          <img src={es} className="w-5" />
-          ES
-        </div>
-      ),
-    },
-  ];
 
   return (
-    <section className="text-[#fff] mt-[10px] px-[50px] flex items-center justify-between">
-      <img src={Logo} className="w-[50px]" />
-      <div className="flex gap-[20px] items-center">
+    <section className="text-[#6D6D6E] text-[18px] mt-8 px-48 flex items-center justify-between">
+      <img src={Logo} className="w-[100px]" />
+      <div className="flex gap-[30px] items-center">
         <a href="">{t("About")}</a>
         <a href="">{t("Proyects")}</a>
         <a href="">{t("Contact")}</a>
         <a href="">{t("Language")}</a>
         <select
-          className="w-[50px] border text-[#636363]  focus:outline-none py-2 px-1"
+          className="w-auto focus:outline-none border-none py-2 px-1 bg-black"
           value={idioma}
           onChange={toggleLanguage}
           required
         >
-          <option value="1">
-            
-            <img src={en} />
-          </option>
+          <option value="1">es</option>
           <option value="0">
-            es
+            en
             <img src={es} className="w-[2px]" />
           </option>
         </select>
-        <Select
-          options={opciones}
-          onChange={(opcion) => setIdioma(opcion.value)}
-        />
       </div>
     </section>
   );
