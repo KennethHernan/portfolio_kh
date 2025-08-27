@@ -7,7 +7,7 @@ import tailwind from "../assets/TailwindCSS.svg";
 import vscode from "../assets/VSCode.svg";
 import github from "../assets/Github.svg";
 import react from "../assets/react.png";
-import vercel from "../assets/Vercel.svg";
+import vercel from "../assets/vercel.svg";
 import sql from "../assets/sql.svg";
 import firebase from "../assets/firebase.svg";
 import angular from "../assets/angular.svg";
