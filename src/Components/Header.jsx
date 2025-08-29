@@ -17,10 +17,9 @@ function Header() {
     <section className="text-[#6D6D6E] text-[18px] mt-8 px-48 flex items-center justify-between">
       <img src={Logo} className="w-[100px]" />
       <div className="flex gap-[30px] items-center">
-        <a href="">{t("About")}</a>
-        <a href="">{t("Proyects")}</a>
-        <a href="">{t("Contact")}</a>
-        <a href="">{t("Language")}</a>
+        <a href="#about_me">{t("About")}</a>
+        <a href="#proyects">{t("Proyects")}</a>
+        <a href="#contact_me">{t("Contact")}</a>
         <select
           className="w-auto focus:outline-none border-none py-2 px-1 bg-black"
           value={idioma}

@@ -12,10 +12,10 @@ function HomePage() {
     <>
       <section className="select-none h-[100vh] flex flex-col overflow-hidden">
         <Header />
-        <section className="h-full flex flex-col justify-between">
-          <div className="mt-32 px-64 text-[#fff] text-[80px] font-bold">
-            <p>Hi, I’m Kenneth De La Cruz.</p>
-            <section className="flex gap-[10px] items-center -mt-10 text-[#CBACF9]">
+        <section id="about_me" className="h-full flex flex-col justify-between">
+          <div className="min-w-[680px] mt-32 lg:px-60 px-20 text-[60px] text-[#fff] lg:text-[80px] font-bold">
+            <p className="leading-none">Hi, I’m Kenneth De La Cruz.</p>
+            <section className="flex gap-[10px] items-center -mt-7 md:-mt-2 text-[#CBACF9]">
               <div className="text-[40px] font-bold">
                 <p>Back- end</p>
                 <p className="-mt-6">Front-end</p>
@@ -28,7 +28,7 @@ function HomePage() {
           <Skills1 />
         </section>
       </section>
-      <section className="select-none flex justify-center items-center mt-5">
+      <section id="proyects" className="select-none flex justify-center items-center mt-5">
         <Proyects />
       </section>
       <section className="h-[100vh] flex flex-col justify-center items-center text-[#6D6D6E]">
@@ -52,7 +52,7 @@ function HomePage() {
         </ul>
       </section>
       
-        <footer className="h-[100px] font-medium flex gap-2 justify-center items-center text-[#fff]">
+        <footer id="contact_me" className="h-[100px] font-medium flex gap-2 justify-center items-center text-[#fff]">
           <p className="text-[#6D6D6E]">{t("foot")}</p>
           <p>{t("foot2")}</p>
         </footer>
