@@ -15,7 +15,7 @@ import mongodb from "../assets/mongodb.svg";
 import java from "../assets/java.svg";
 import microsoftvs from "../assets/microsoftvs.svg";
 
-function skills1() {
+function skillsMovile() {
   const sliderRef = useRef(null);
   const sliderRefe = useRef(null);
   const animationRef = useRef(null);
@@ -89,8 +89,8 @@ function skills1() {
   }, []);
 
   return (
-    <section className="mb-[50px] select-none w-full md:flex flex-col text-[#fff] text-[30px] hidden">
-      <section className="select-none w-full flex items-center h-auto overflow-hidden text-[#fff] text-[30px]">
+    <section className="mb-[50px] select-none w-full flex flex-col text-[#fff] text-[30px] md:hidden">
+      <section className="mt-[40px] w-full flex items-center h-auto overflow-hidden text-[#fff] text-[16px]">
         <div
           className="flex gap-[50px]"
           ref={sliderRef}
@@ -103,11 +103,11 @@ function skills1() {
           {[...skills, ...skills].map((skill, i) => (
             <div
               key={i}
-              className="ml-16 inline-flex items-center gap-[30px]  rounded-lg"
-              style={{ marginRight: "50px" }}
+              className="ml-10 inline-flex items-center gap-[5px]  rounded-md"
+              style={{ marginRight: "30px" }}
             >
-              <img src={skill.img} alt={skill.label} />
-              <p className="pr-10" style={{ whiteSpace: "nowrap" }}>
+              <img src={skill.img} alt={skill.label} className="w-[50px]" />
+              <p style={{ whiteSpace: "nowrap" }}>
                 {skill.label}
               </p>
             </div>
@@ -115,7 +115,7 @@ function skills1() {
         </div>
       </section>
 
-      <section className="mt-[40px] w-full flex items-center h-auto overflow-hidden text-[#fff] text-[30px]">
+      <section className="mt-[40px] w-full flex items-center h-auto overflow-hidden text-[#fff] text-[16px]">
         <div
           className="flex gap-[50px]"
           ref={sliderRefe}
@@ -128,11 +128,11 @@ function skills1() {
           {[...skills2, ...skills2].map((skill, i) => (
             <div
               key={i}
-              className="ml-16 inline-flex items-center gap-[30px]  rounded-lg"
-              style={{ marginRight: "50px" }}
+              className="ml-10 inline-flex items-center gap-[5px]  rounded-md"
+              style={{ marginRight: "0px" }}
             >
-              <img src={skill.img} alt={skill.label} />
-              <p className="pr-10" style={{ whiteSpace: "nowrap" }}>
+              <img src={skill.img} alt={skill.label} className="w-[50px]" />
+              <p style={{ whiteSpace: "nowrap" }}>
                 {skill.label}
               </p>
             </div>
@@ -143,4 +143,4 @@ function skills1() {
   );
 }
 
-export default skills1;
+export default skillsMovile;

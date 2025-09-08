@@ -18,8 +18,6 @@ function Header() {
 
   useEffect(() => {
     const savedLanguage = localStorage.getItem("i18nextLng");
-    console.log("savedLanguage", savedLanguage);
-
     if (savedLanguage) {
       setIdioma(savedLanguage);
     } else {
@@ -61,9 +59,9 @@ function Header() {
   });
 
   return (
-    <section className="text-[#6D6D6E] text-md mt-8 px-48 flex items-center justify-between font-medium">
-      <img src={Logo} className="w-[100px]" />
-      <div className="flex gap-[30px] items-center">
+    <section className="text-[#6D6D6E] text-sm lg:text-md mt-8 px-3 lg:px-48 flex items-center justify-between font-medium">
+      <img src={Logo} className="w-[40px] lg:w-[100px] ml-2" />
+      <div className="flex gap-3 lg:gap-[30px] items-center">
         <a
           href="#about_me"
           className="hover:text-white transition-colors duration-300"

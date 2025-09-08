@@ -33,8 +33,12 @@ function Proyects() {
   AOS.init();
 
   return (
-    <div className="text-[#fff] justify-center grid grid-cols-2 gap-2">
-      <section data-aos="fade-up-right" data-aos-duration="2300" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+    <div className="text-[#fff] justify-center grid grid-cols-1 md:grid-cols-2 gap-2">
+      <section
+        data-aos="fade-up-right"
+        data-aos-duration="2300"
+        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
+      >
         <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[20px]">
           <img src={coverProyect1} />
         </div>
@@ -58,7 +62,11 @@ function Proyects() {
         </ul>
       </section>
 
-      <section data-aos="fade-up-left" data-aos-duration="2500" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+      <section
+        data-aos="fade-up-left"
+        data-aos-duration="2500"
+        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
+      >
         <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[20px]">
           <img src={coverProyect2} />
         </div>
@@ -79,9 +87,16 @@ function Proyects() {
         </ul>
       </section>
 
-      <section data-aos="fade-up-right" data-aos-duration="2300" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[88px]">
+      <section
+        data-aos="fade-up-right"
+        data-aos-duration="2300"
+        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
+      >
+        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px] relative">
           <img src={coverProyect3} />
+          <li className="flex items-center absolute top-5 right-5">
+            <img src={privado} alt="Pagina Web Privada" className="w-[30px]" />
+          </li>
         </div>
         <p className="w-full text-[28px] font-medium mt-2 text-start">
           {t("proyect3")}
@@ -106,15 +121,14 @@ function Proyects() {
           <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
             <img src={mongodb} alt="" />
           </li>
-          <li className="ml-[80px] flex items-center">
-            <p className="flex gap-2 font-light text-[#A6A6A6]">
-              <img src={privado} alt="" className="w-[30px]" />
-            </p>
-          </li>
         </ul>
       </section>
 
-      <section data-aos="fade-up-left" data-aos-duration="2500" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+      <section
+        data-aos="fade-up-left"
+        data-aos-duration="2500"
+        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
+      >
         <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[20px]">
           <img src={coverProyect4} />
         </div>
@@ -138,9 +152,22 @@ function Proyects() {
         </ul>
       </section>
 
-      <section data-aos="fade-up-right" data-aos-duration="2300" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[89px]">
+      <section
+        data-aos="fade-up-right"
+        data-aos-duration="2300"
+        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
+      >
+        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px] relative">
           <img src={coverProyect5} />
+          <li className="flex items-center absolute top-5 right-5">
+            <a
+              href="https://barberia-shop.vercel.app/"
+              target="_blank"
+              className="flex gap-2 font-light text-[#A6A6A6]"
+            >
+              {t("visit")}<img src={flecha} alt="" />
+            </a>
+          </li>
         </div>
         <p className="w-full text-[28px] font-medium mt-2 text-start">
           {t("proyect5")}
@@ -163,19 +190,14 @@ function Proyects() {
           <li className="hover:scale-105 overflow-hidden hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
             <img src={vite} alt="" />
           </li>
-          <li className="ml-[80px] flex items-center">
-            <a
-              href="https://barberia-shop.vercel.app/"
-              target="_blank"
-              className="flex gap-2 font-light text-[#A6A6A6]"
-            >
-              Ver en web <img src={flecha} alt="" />
-            </a>
-          </li>
         </ul>
       </section>
 
-      <section data-aos="fade-up-left" data-aos-duration="2500" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+      <section
+        data-aos="fade-up-left"
+        data-aos-duration="2500"
+        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
+      >
         <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px]">
           <img src={coverProyect6} />
         </div>
@@ -205,9 +227,16 @@ function Proyects() {
         </ul>
       </section>
 
-      <section data-aos="fade-up-right" data-aos-duration="2300" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px]">
+      <section
+        data-aos="fade-up-right"
+        data-aos-duration="2300"
+        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
+      >
+        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px] relative">
           <img src={coverProyect7} />
+          <li className="flex items-center absolute top-5 right-5">
+            <img src={privado} alt="Pagina Web Privada" className="w-[30px]" />
+          </li>
         </div>
         <p className="w-full text-[28px] font-medium mt-2 text-start">
           {t("proyect7")}
@@ -231,11 +260,6 @@ function Proyects() {
           </li>
           <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
             <img src={mongodb} alt="" />
-          </li>
-          <li className="ml-[80px] flex items-center">
-            <p className="flex gap-2 font-light text-[#A6A6A6]">
-              <img src={privado} alt="" className="w-[30px]" />
-            </p>
           </li>
         </ul>
       </section>
