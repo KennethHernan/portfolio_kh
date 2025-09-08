@@ -4,6 +4,7 @@ import coverProyect3 from "../assets/coverProyect3.png";
 import coverProyect4 from "../assets/coverProyect4.png";
 import coverProyect5 from "../assets/coverProyect5.png";
 import coverProyect6 from "../assets/coverProyect6.png";
+import coverProyect7 from "../assets/coverProyect7.png";
 import node from "../assets/icon_node.svg";
 import android from "../assets/android.svg";
 import firebase from "../assets/icon_firebase.svg";
@@ -25,12 +26,15 @@ import flecha from "../assets/icon_flecha.svg";
 import privado from "../assets/icon_privado.svg";
 import { useTranslation } from "react-i18next";
 
+import AOS from "aos";
+import "aos/dist/aos.css";
 function Proyects() {
   const { t, i18n } = useTranslation();
+  AOS.init();
 
   return (
     <div className="text-[#fff] justify-center grid grid-cols-2 gap-2">
-      <section className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+      <section data-aos="fade-up-right" data-aos-duration="2300" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
         <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[20px]">
           <img src={coverProyect1} />
         </div>
@@ -54,7 +58,7 @@ function Proyects() {
         </ul>
       </section>
 
-      <section className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+      <section data-aos="fade-up-left" data-aos-duration="2500" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
         <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[20px]">
           <img src={coverProyect2} />
         </div>
@@ -75,7 +79,7 @@ function Proyects() {
         </ul>
       </section>
 
-      <section className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+      <section data-aos="fade-up-right" data-aos-duration="2300" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
         <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[88px]">
           <img src={coverProyect3} />
         </div>
@@ -110,7 +114,7 @@ function Proyects() {
         </ul>
       </section>
 
-      <section className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+      <section data-aos="fade-up-left" data-aos-duration="2500" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
         <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[20px]">
           <img src={coverProyect4} />
         </div>
@@ -134,7 +138,7 @@ function Proyects() {
         </ul>
       </section>
 
-      <section className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+      <section data-aos="fade-up-right" data-aos-duration="2300" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
         <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[89px]">
           <img src={coverProyect5} />
         </div>
@@ -171,7 +175,7 @@ function Proyects() {
         </ul>
       </section>
 
-      <section className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+      <section data-aos="fade-up-left" data-aos-duration="2500" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
         <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px]">
           <img src={coverProyect6} />
         </div>
@@ -197,6 +201,41 @@ function Proyects() {
           </li>
           <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
             <img src={mongodb} alt="" />
+          </li>
+        </ul>
+      </section>
+
+      <section data-aos="fade-up-right" data-aos-duration="2300" className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]">
+        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px]">
+          <img src={coverProyect7} />
+        </div>
+        <p className="w-full text-[28px] font-medium mt-2 text-start">
+          {t("proyect7")}
+        </p>
+        <p className="text-[16px] font-light">{t("proyect7_des")}</p>
+        <ul className="w-full flex gap-4 mt-7 mb-5">
+          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
+            <img src={visual} alt="" />
+          </li>
+          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
+            <img src={react} alt="" />
+          </li>
+          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
+            <img src={javascript} alt="" className="w-[35px]" />
+          </li>
+          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
+            <img src={tailwind} alt="" />
+          </li>
+          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
+            <img src={node} alt="" />
+          </li>
+          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
+            <img src={mongodb} alt="" />
+          </li>
+          <li className="ml-[80px] flex items-center">
+            <p className="flex gap-2 font-light text-[#A6A6A6]">
+              <img src={privado} alt="" className="w-[30px]" />
+            </p>
           </li>
         </ul>
       </section>
