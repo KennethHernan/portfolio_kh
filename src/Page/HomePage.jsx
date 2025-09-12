@@ -6,7 +6,7 @@ import Proyects from "../Components/Proyects";
 import linkeding from "../assets/icon_linkedin.svg";
 import instagram from "../assets/icon_instagram.svg";
 import github from "../assets/icon_github.svg";
-
+import profile from "../assets/89922995.png";
 import Typed from "typed.js";
 import AOS from "aos";
 import "aos/dist/aos.css";
@@ -56,12 +56,17 @@ function HomePage() {
   return (
     <>
       <Header />
-      <section className="select-none  max-md:h-[50vh] md:h-[80vh] flex flex-col overflow-hidden justify-center">
-
+      <section className="select-none md:h-[80vh] flex flex-col overflow-hidden justify-center">
         {/* Seccion Movile */}
-        <section id="about_me" className="max-md:flex flex-col justify-between hidden">
-          <div className="flex flex-col items-center mt-32 text-[35px] text-[#fff] font-bold">
-            <p className="leading-none">
+        <section
+          id="about_me"
+          className="max-md:flex flex-col justify-between hidden"
+        >
+          <div className="h-auto flex flex-col items-center mt-32 text-[35px] text-[#fff] font-bold">
+            <div className="border-[#fff] border-[4px] rounded-[50%] border-solid p-2 w-[20vh]">
+              <img src={profile} alt="Profile" className="rounded-[50%]" />
+            </div>
+            <p className="h-auto leading-none my-5 text-center">
               <span ref={el} />
             </p>
             <section className="flex gap-[10px] items-center -mt-2 text-[#CBACF9]">
@@ -72,32 +77,37 @@ function HomePage() {
                 <p
                   data-aos="fade-right"
                   data-aos-duration="2300"
-                  className="-mt-[20px]"
+                  className="-mt-[15px]"
                 >
                   Frontend
                 </p>
               </div>
-                <div
-                  data-aos="zoom-in"
-                  data-aos-duration="2300"
-                  className="bg-[#CBACF9] w-[3px] h-[40px] mt-1"
-                ></div>
-                <p data-aos="fade-left" data-aos-duration="2300">
-                  Developer
-                </p>
+              <div
+                data-aos="zoom-in"
+                data-aos-duration="2300"
+                className="bg-[#CBACF9] w-[3px] h-[40px] mt-1"
+              ></div>
+              <p data-aos="fade-left" data-aos-duration="2300">
+                Developer
+              </p>
             </section>
-            <p className="mt-3 px-6 text-[16px] text-center sm:text-start font-medium pb-10">{t("description")}</p>
+            <p className="h-auto mt-3 px-6 text-[16px] text-center sm:text-start font-medium pb-10">
+              {t("description")}
+            </p>
           </div>
         </section>
 
         {/* Seccion Desktop */}
-        <section id="about_me" className="md:flex flex-col justify-betwee hidden">
-          <div className="mt-32 px-20 lg:px-50 text-[35px] md:text-[60px] text-[#fff] lg:text-[80px] font-bold">
+        <section
+          id="about_me"
+          className="md:flex flex-row justify-center items-center hidden"
+        >
+          <div className="mt-32 pl-20 lg:px-50 text-[35px] md:text-[60px] text-[#fff] lg:text-[80px] font-bold">
             <p className="leading-none">
               <span ref={she} />
             </p>
 
-             <section className="flex gap-[10px] items-center -mt-7 md:-mt-2 text-[#CBACF9]">
+            <section className="flex gap-[10px] items-center -mt-7 md:-mt-2 text-[#CBACF9]">
               <div className="text-[40px] font-bold">
                 <p data-aos="fade-right" data-aos-duration="2000">
                   Back- end
@@ -119,7 +129,12 @@ function HomePage() {
                 Developer
               </p>
             </section>
-            <p className=" max-w-[100vh] mt-3 text-[16px] mr-[10em] md:text-[20px] text-center sm:text-start font-medium">{t("description")}</p>
+            <p className=" max-w-[100vh] mt-3 text-[16px] mr-[10em] md:text-[20px] text-center sm:text-start font-medium">
+              {t("description")}
+            </p>
+          </div>
+          <div className=" border-[#fff] border-[4px] mr-20 rounded-[50%] border-solid p-3">
+            <img src={profile} alt="Profile" className=" rounded-[50%]" />
           </div>
         </section>
       </section>
@@ -127,7 +142,7 @@ function HomePage() {
       <SkillsMovile />
       <section
         id="proyects"
-        className="select-none flex justify-center items-center mt-5"
+        className="select-none flex justify-center items-center mt-5 overflow-hidden"
       >
         <Proyects />
       </section>
@@ -137,7 +152,9 @@ function HomePage() {
           <p>{t("contact_des1")}</p>
           <p className=" text-[#ffffff]">{t("contact_des2")}</p>
         </div>
-        <p className="-mt-2 md:-mt-4 text-[14px] md:text-[20px]">{t("contact_description")}</p>
+        <p className="-mt-2 md:-mt-4 text-[14px] md:text-[20px]">
+          {t("contact_description")}
+        </p>
         <a
           href="https://wa.me/952304548"
           target="_blank"

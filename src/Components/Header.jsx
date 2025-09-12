@@ -15,7 +15,6 @@ function Header() {
   const [idioma, setIdioma] = useState("");
 
   // Guardar idioma seleccionada en el local storage
-
   useEffect(() => {
     const savedLanguage = localStorage.getItem("i18nextLng");
     if (savedLanguage) {
@@ -41,7 +40,9 @@ function Header() {
         dropdown.current.contains(target) ||
         trigger.current.contains(target)
       )
+        //setDropdownOpen(false)
         return;
+
       setDropdownOpen(false);
     };
     document.addEventListener("click", clickHandler);
@@ -52,7 +53,6 @@ function Header() {
   useEffect(() => {
     const keyHandler = ({ keyCode }) => {
       if (!dropdownOpen || keyCode !== 27) return;
-      setDropdownOpen(false);
     };
     document.addEventListener("keydown", keyHandler);
     return () => document.removeEventListener("keydown", keyHandler);
@@ -85,7 +85,7 @@ function Header() {
             <button
               ref={trigger}
               onClick={() => setDropdownOpen(!dropdownOpen)}
-              className="inline-flex items-center justify-center gap-2 rounded-lg py-2 px-1 text-base font-medium text-dark dark:border-[#6D6D6E] dark:bg-[#000000] dark:text-[#6D6D6E]"
+              className="inline-flex items-center justify-center gap-2 rounded-lg py-2 px-1 text-base font-medium border-[#6D6D6E] bg-[#000000] text-[#6D6D6E]"
             >
               {idioma}
               <span
@@ -111,32 +111,55 @@ function Header() {
               ref={dropdown}
               onFocus={() => setDropdownOpen(true)}
               onBlur={() => setDropdownOpen(false)}
-              className={`absolute right-0 top-full mt-3.5  w-[240px] divide-y divide-stroke overflow-hidden rounded-lg bg-white dark:divide-[#6D6D6E] dark:bg-[#000000] ${
+              className={`absolute right-0 top-full mt-3.5  w-[240px] divide-y divide-stroke overflow-hidden rounded-lg divide-[#6D6D6E] bg-[#000000] ${
                 dropdownOpen ? "block" : "hidden"
               }`}
             >
               <div className="px-4 py-3">
-                <p className="text-sm font-semibold text-dark dark:text-[#6D6D6E]">
+                <p className="text-sm font-semibold text-[#6D6D6E]">
                   {t("TitleLenguage")}
                 </p>
               </div>
               <div>
-                <button
-                  onClick={() => setIdioma("en")}
-                  className="flex w-full items-center justify-between px-4 py-2.5 text-sm font-medium text-dark hover:bg-gray-50 dark:text-[#6D6D6E] dark:hover:bg-white/5"
-                >
-                  <span className="flex items-center gap-2">
-                    {t("English")}
-                  </span>
-                </button>
-                <button
-                  onClick={() => setIdioma("es")}
-                  className="flex w-full items-center justify-between px-4 py-2.5 text-sm font-medium text-dark hover:bg-gray-50 dark:text-[#6D6D6E] dark:hover:bg-white/5"
-                >
-                  <span className="flex items-center gap-2">
-                    {t("Spanish")}
-                  </span>
-                </button>
+                {idioma === "en" ? (
+                  <button
+                    onClick={() => {setIdioma("en"); setDropdownOpen(false)}}
+                    className="flex w-full items-center justify-between px-4 py-2.5 text-sm font-medium text-[#6D6D6E] bg-white/5"
+                  >
+                    <span className="flex items-center gap-2 text-[#fff]">
+                      {t("English")}
+                    </span>
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => {setIdioma("en"); setDropdownOpen(false)}}
+                    className="flex w-full items-center justify-between px-4 py-2.5 text-sm font-medium text-[#6D6D6E] hover:bg-white/5 group"
+                  >
+                    <span className="flex items-center gap-2 group-hover:text-[#fff]">
+                      {t("English")}
+                    </span>
+                  </button>
+                )}
+
+                {idioma === "es" ? (
+                  <button
+                    onClick={() => {setIdioma("es"); setDropdownOpen(false)}}
+                    className="flex w-full items-center justify-between px-4 py-2.5 text-sm font-medium text-[#6D6D6E] bg-white/5"
+                  >
+                    <span className="flex items-center gap-2 text-[#fff]">
+                      {t("Spanish")}
+                    </span>
+                  </button>
+                ) : (
+                  <button
+                    onClick={() => {setIdioma("es"); setDropdownOpen(false)}}
+                    className="flex w-full items-center justify-between px-4 py-2.5 text-sm font-medium text-[#6D6D6E] hover:bg-white/5 group"
+                  >
+                    <span className="flex items-center gap-2 group-hover:text-[#fff]">
+                      {t("Spanish")}
+                    </span>
+                  </button>
+                )}
               </div>
             </div>
           </div>
