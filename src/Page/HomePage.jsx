@@ -12,7 +12,7 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import { useEffect, useRef } from "react";
 function HomePage() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   AOS.init();
 
   const el = useRef(null);
@@ -22,7 +22,7 @@ function HomePage() {
 
   useEffect(() => {
     typed.current = new Typed(she.current, {
-      strings: ["< Hi />", "I’m Kenneth De La Cruz", "Disfruta tu visita"],
+      strings: ["Backend Developer", "Frontend Developer", "Web Developer", "Web Design"],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 1000,
@@ -39,7 +39,7 @@ function HomePage() {
 
   useEffect(() => {
     typed2.current = new Typed(el.current, {
-      strings: ["< Hi />", "I’m Kenneth De La Cruz", "Disfruta tu visita"],
+      strings: ["Backend Developer", "Frontend Developer", "Web Developer", "Web Design"],
       typeSpeed: 100,
       backSpeed: 50,
       backDelay: 1000,
@@ -60,38 +60,19 @@ function HomePage() {
         {/* Seccion Movile */}
         <section
           id="about_me"
-          className="max-md:flex flex-col justify-between hidden"
+          className="flex-col justify-between hidden max-md:flex"
         >
-          <div className="h-auto flex flex-col items-center mt-32 text-[35px] text-[#fff] font-bold">
+          <div className="h-auto flex flex-col items-center mt-20 text-[35px] text-[#fff] font-bold">
             <div className="border-[#fff] border-[4px] rounded-[50%] border-solid p-2 w-[20vh]">
               <img src={profile} alt="Profile" className="rounded-[50%]" />
             </div>
-            <p className="h-auto leading-none my-5 text-center">
+            <p className="h-auto mt-5 leading-none text-center">
+              {t("title")}
+            </p>
+            <p className="text-[#CBACF9]">
               <span ref={el} />
             </p>
-            <section className="flex gap-[10px] items-center -mt-2 text-[#CBACF9]">
-              <div className="text-[26px] font-bold">
-                <p data-aos="fade-right" data-aos-duration="2000">
-                  Backend
-                </p>
-                <p
-                  data-aos="fade-right"
-                  data-aos-duration="2300"
-                  className="-mt-[15px]"
-                >
-                  Frontend
-                </p>
-              </div>
-              <div
-                data-aos="zoom-in"
-                data-aos-duration="2300"
-                className="bg-[#CBACF9] w-[3px] h-[40px] mt-1"
-              ></div>
-              <p data-aos="fade-left" data-aos-duration="2300">
-                Developer
-              </p>
-            </section>
-            <p className="h-auto mt-3 px-6 text-[16px] text-center sm:text-start font-medium pb-10">
+            <p className="h-auto mt-3 px-6 text-[16px] text-center sm:text-center font-medium pb-10">
               {t("description")}
             </p>
           </div>
@@ -100,33 +81,16 @@ function HomePage() {
         {/* Seccion Desktop */}
         <section
           id="about_me"
-          className="md:flex flex-row justify-center items-center hidden"
+          className="flex-row items-center justify-center hidden md:flex"
         >
-          <div className="mt-32 pl-20 lg:px-50 text-[35px] md:text-[60px] text-[#fff] lg:text-[80px] font-bold">
+          <div className="mt-32 pl-20 lg:px-50 text-[30px] md:text-[50px] text-[#fff] lg:text-[60px] font-bold">
             <p className="leading-none">
-              <span ref={she} />
+              {t("title")}
             </p>
 
             <section className="flex gap-[10px] items-center -mt-7 md:-mt-2 text-[#CBACF9]">
-              <div className="text-[40px] font-bold">
-                <p data-aos="fade-right" data-aos-duration="2000">
-                  Back- end
-                </p>
-                <p
-                  data-aos="fade-right"
-                  data-aos-duration="2300"
-                  className="-mt-6"
-                >
-                  Front-end
-                </p>
-              </div>
-              <div
-                data-aos="zoom-in"
-                data-aos-duration="2300"
-                className="bg-[#CBACF9] w-[7px] h-[70px] mt-1"
-              ></div>
-              <p data-aos="fade-left" data-aos-duration="2300">
-                Developer
+              <p>
+                <span ref={she} />
               </p>
             </section>
             <p className=" max-w-[100vh] mt-3 text-[16px] mr-[10em] md:text-[20px] text-center sm:text-start font-medium">
@@ -142,7 +106,7 @@ function HomePage() {
       <SkillsMovile />
       <section
         id="proyects"
-        className="select-none flex justify-center items-center mt-5 overflow-hidden"
+        className="flex items-center justify-center mt-5 overflow-hidden select-none"
       >
         <Proyects />
       </section>
