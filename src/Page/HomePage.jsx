@@ -83,7 +83,8 @@ function HomePage() {
           id="about_me"
           className="flex-row items-center justify-center hidden md:flex"
         >
-          <div className="mt-32 pl-20 lg:px-50 text-[30px] md:text-[50px] text-[#fff] lg:text-[60px] font-bold">
+          {/* Description */}
+          <div className="pl-20 lg:px-50 text-[30px] md:text-[50px] text-[#fff] lg:text-[60px] font-bold">
             <p className="leading-none">
               {t("title")}
             </p>
@@ -97,6 +98,7 @@ function HomePage() {
               {t("description")}
             </p>
           </div>
+          {/* Imagen Perfil */}
           <div className=" border-[#fff] border-[4px] mr-20 rounded-[50%] border-solid p-3">
             <img src={profile} alt="Profile" className=" rounded-[50%]" />
           </div>

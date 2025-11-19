@@ -20,9 +20,7 @@ function skillsMovile() {
   const sliderRefe = useRef(null);
   const animationRef = useRef(null);
 
-  const skills = [
-    { img: nodejs, label: "Node JS" },
-    { img: javascript, label: "JavaScript" },
+const skills = [
     { img: typescript, label: "Typescript" },
     { img: figma, label: "Figma" },
     { img: tailwind, label: "Tailwind CSS" },
@@ -30,12 +28,6 @@ function skillsMovile() {
     { img: github, label: "GitHub" },
     { img: react, label: "React JS" },
     { img: vercel, label: "Vercel" },
-    { img: sql, label: "Microsoft SQL Server" },
-    { img: firebase, label: "FireBase RealDatatime" },
-    { img: angular, label: "Angular" },
-    { img: mongodb, label: "Mongo DB" },
-    { img: java, label: "Java" },
-    { img: microsoftvs, label: "Microsoft Visual Studio" },
   ];
 
   const skills2 = [
@@ -47,13 +39,6 @@ function skillsMovile() {
     { img: microsoftvs, label: "Microsoft Visual Studio" },
     { img: nodejs, label: "Node JS" },
     { img: javascript, label: "JavaScript" },
-    { img: typescript, label: "Typescript" },
-    { img: figma, label: "Figma" },
-    { img: tailwind, label: "Tailwind CSS" },
-    { img: vscode, label: "Visual Studio Code" },
-    { img: github, label: "GitHub" },
-    { img: react, label: "React JS" },
-    { img: vercel, label: "Vercel" },
   ];
 
   useEffect(() => {
