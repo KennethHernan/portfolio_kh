@@ -316,11 +316,11 @@ function Proyects() {
           <img src={coverProyect9} />
           <li className="flex items-center absolute top-5 right-5">
             <a
-              href="https://github.com/KennethHernan/asistenciaMDPH"
+              href="https://expo.dev/accounts/kennethdr/projects/react-native-app/builds/13d3b310-76db-40cf-8a42-a46e617aefff"
               target="_blank"
               className="flex gap-2 font-light text-[#A6A6A6]"
             >
-              Github<img src={flecha} alt="" />
+              APK <img src={flecha} alt="" />
             </a>
           </li>
         </div>
