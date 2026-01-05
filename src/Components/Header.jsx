@@ -17,10 +17,13 @@ function Header() {
   // Guardar idioma seleccionada en el local storage
   useEffect(() => {
     const savedLanguage = localStorage.getItem("i18nextLng");
+    if (savedLanguage === "en-US") return setIdioma("en");
     if (savedLanguage) {
       setIdioma(savedLanguage);
+      console.log("savedLanguage:", savedLanguage);
+
     } else {
-      setIdioma("es");
+      setIdioma("en");
     }
   }, []);
 
@@ -49,7 +52,6 @@ function Header() {
     return () => document.removeEventListener("click", clickHandler);
   });
 
-  // close if the esc key is pressed
   useEffect(() => {
     const keyHandler = ({ keyCode }) => {
       if (!dropdownOpen || keyCode !== 27) return;
@@ -89,9 +91,8 @@ function Header() {
             >
               {idioma}
               <span
-                className={`mt-1 duration-100 ${
-                  dropdownOpen ? "-scale-y-100" : ""
-                }`}
+                className={`mt-1 duration-100 ${dropdownOpen ? "-scale-y-100" : ""
+                  }`}
               >
                 <svg
                   width="15"
@@ -111,9 +112,8 @@ function Header() {
               ref={dropdown}
               onFocus={() => setDropdownOpen(true)}
               onBlur={() => setDropdownOpen(false)}
-              className={`absolute right-0 top-full mt-3.5  w-[240px] divide-y divide-stroke overflow-hidden rounded-lg divide-[#6D6D6E] bg-[#000000] ${
-                dropdownOpen ? "block" : "hidden"
-              }`}
+              className={`absolute right-0 top-full mt-3.5  w-[240px] divide-y divide-stroke overflow-hidden rounded-lg divide-[#6D6D6E] bg-[#000000] ${dropdownOpen ? "block" : "hidden"
+                }`}
             >
               <div className="px-4 py-3">
                 <p className="text-sm font-semibold text-[#6D6D6E]">
@@ -123,7 +123,7 @@ function Header() {
               <div>
                 {idioma === "en" ? (
                   <button
-                    onClick={() => {setIdioma("en"); setDropdownOpen(false)}}
+                    onClick={() => { setIdioma("en"); setDropdownOpen(false) }}
                     className="flex w-full items-center justify-between px-4 py-2.5 text-sm font-medium text-[#6D6D6E] bg-white/5"
                   >
                     <span className="flex items-center gap-2 text-[#fff]">
@@ -132,7 +132,7 @@ function Header() {
                   </button>
                 ) : (
                   <button
-                    onClick={() => {setIdioma("en"); setDropdownOpen(false)}}
+                    onClick={() => { setIdioma("en"); setDropdownOpen(false) }}
                     className="flex w-full items-center justify-between px-4 py-2.5 text-sm font-medium text-[#6D6D6E] hover:bg-white/5 group"
                   >
                     <span className="flex items-center gap-2 group-hover:text-[#fff]">
@@ -143,7 +143,7 @@ function Header() {
 
                 {idioma === "es" ? (
                   <button
-                    onClick={() => {setIdioma("es"); setDropdownOpen(false)}}
+                    onClick={() => { setIdioma("es"); setDropdownOpen(false) }}
                     className="flex w-full items-center justify-between px-4 py-2.5 text-sm font-medium text-[#6D6D6E] bg-white/5"
                   >
                     <span className="flex items-center gap-2 text-[#fff]">
@@ -152,7 +152,7 @@ function Header() {
                   </button>
                 ) : (
                   <button
-                    onClick={() => {setIdioma("es"); setDropdownOpen(false)}}
+                    onClick={() => { setIdioma("es"); setDropdownOpen(false) }}
                     className="flex w-full items-center justify-between px-4 py-2.5 text-sm font-medium text-[#6D6D6E] hover:bg-white/5 group"
                   >
                     <span className="flex items-center gap-2 group-hover:text-[#fff]">
