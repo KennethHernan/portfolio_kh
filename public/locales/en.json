@@ -1,10 +1,11 @@
 {
   "TitleLenguage": "Select Language",
+  "LanguageName": "English",
   "Spanish": "Spanish",
   "English": "English",
-  "About": "About Me",
+  "About": "About me",
   "Proyects": "Projects",
-  "Contact": "Contact Me",
+  "Contact": "Contact me",
   "Language": "Language",
   "title": "Hi, I am",
   "description": "My name is Kenneth De La Cruz, I hold a Bachelor's degree in Systems Engineering, and I am a full-stack web developer with experience in both backend and frontend. I am passionate about creating efficient, secure digital solutions with an excellent user experience.",
