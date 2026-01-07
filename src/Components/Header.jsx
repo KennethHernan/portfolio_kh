@@ -20,8 +20,6 @@ function Header() {
     if (savedLanguage === "en-US") return setIdioma("en");
     if (savedLanguage) {
       setIdioma(savedLanguage);
-      console.log("savedLanguage:", savedLanguage);
-
     } else {
       setIdioma("en");
     }
@@ -43,14 +41,13 @@ function Header() {
         dropdown.current.contains(target) ||
         trigger.current.contains(target)
       )
-        //setDropdownOpen(false)
         return;
 
       setDropdownOpen(false);
     };
     document.addEventListener("click", clickHandler);
     return () => document.removeEventListener("click", clickHandler);
-  });
+  }, []);
 
   useEffect(() => {
     const keyHandler = ({ keyCode }) => {
@@ -61,8 +58,10 @@ function Header() {
   });
 
   return (
-    <section className="text-[#6D6D6E] text-sm lg:text-md mt-8 px-3 lg:px-48 flex items-center justify-between font-medium">
-      <img src={Logo} className="w-[40px] lg:w-[100px] ml-2" />
+    <section className="text-[#6D6D6E] text-sm lg:text-md mt-8 px-3 flex items-center justify-between font-medium">
+      <span className="pointer-events-none">
+        <img src={Logo} className="w-[40px] lg:w-[60px]" />
+      </span>
       <div className="flex gap-3 lg:gap-[30px] items-center">
         <a
           href="#about_me"
