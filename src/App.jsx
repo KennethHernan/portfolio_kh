@@ -4,4 +4,5 @@ import './i18next';
 function App() {
   return <AppRoutes />;
 }
+
 export default App;

@@ -10,10 +10,8 @@ export default {
       container : {
         center : true
       },
-      colors : {
-        
+      colors : { 
       }
-      
     },
   },
   plugins: [],

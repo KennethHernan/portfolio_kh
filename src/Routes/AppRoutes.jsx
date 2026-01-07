@@ -5,7 +5,6 @@ export const AppRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
-        {/* Ruta pública */}
         <Route path="/" element={<HomePage />} />
       </Routes>
     </BrowserRouter>
