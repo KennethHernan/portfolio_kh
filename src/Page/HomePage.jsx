@@ -37,7 +37,7 @@ function HomePage() {
   useEffect(() => {
     setModalActive(false);
     setProyectId(null);
-  },[])
+  }, [])
 
   const ModalProyecto = (i) => {
     setModalActive(true);
@@ -170,7 +170,7 @@ function HomePage() {
                     <span className="pointer-events-none">
                       <img src={icon_codigo} alt="" />
                     </span>
-                    Descargar CV
+                    {t("download_cv")}
                     <span className="pointer-events-none">
                       <img src={icon_flecha2} alt="" />
                     </span>
