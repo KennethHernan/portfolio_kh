@@ -1,348 +1,216 @@
-import coverProyect1 from "../assets/coverProyect1.png";
-import coverProyect2 from "../assets/coverProyect2.png";
-import coverProyect3 from "../assets/coverProyect3.png";
-import coverProyect4 from "../assets/coverProyect4.png";
-import coverProyect5 from "../assets/coverProyect5.png";
-import coverProyect6 from "../assets/coverProyect6.png";
-import coverProyect7 from "../assets/coverProyect7.png";
-import coverProyect8 from "../assets/coverProyect8.png";
-import coverProyect9 from "../assets/coverProyect9.png";
-
-import node from "../assets/icon_node.svg";
-import android from "../assets/android.svg";
-import firebase from "../assets/icon_firebase.svg";
-import java from "../assets/icon_java.svg";
-import sqlLite from "../assets/icon_sqlLite.svg";
-import visual from "../assets/icon_visual.svg";
-import react from "../assets/icon_react.svg";
-import tailwind from "../assets/icon_tailwind.svg";
-import javascript from "../assets/javascript.svg";
-import mongodb from "../assets/icon_mongodb.svg";
-import microsoftvs from "../assets/icon_microsoftVS.svg";
-import c from "../assets/icon_c.svg";
-import netFramework from "../assets/icon_netFramework.svg";
-import microsoftSql from "../assets/icon_misrosoftsql.svg";
-import vite from "../assets/vercel.svg";
-import angular from "../assets/icon_angular.svg";
-import typescript from "../assets/icon_typeScript.svg";
-import flecha from "../assets/icon_flecha.svg";
-import privado from "../assets/icon_privado.svg";
 import { useTranslation } from "react-i18next";
-
 import AOS from "aos";
 import "aos/dist/aos.css";
+import icon_flecha from "../assets/icon_flecha2.svg";
+
+/*
+import Proyect1 from "../Components/Proyects/Proyect1.jsx";
+import Proyect2 from "../Components/Proyects/Proyect2.jsx";
+import Proyect3 from "../Components/Proyects/Proyect3.jsx";
+import Proyect4 from "../Components/Proyects/Proyect4.jsx";
+import Proyect5 from "../Components/Proyects/Proyect5.jsx";
+import Proyect6 from "../Components/Proyects/Proyect6.jsx";
+import Proyect7 from "../Components/Proyects/Proyect7.jsx";
+import Proyect8 from "../Components/Proyects/Proyect8.jsx";
+import Proyect9 from "../Components/Proyects/Proyect9.jsx";
+*/
+
 function Proyects() {
   const { t, i18n } = useTranslation();
   AOS.init();
 
   return (
-    <div className="text-[#fff] justify-center grid grid-cols-1 md:grid-cols-2 gap-2">
-      <section
-        data-aos="fade-up-right"
-        data-aos-duration="2300"
-        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
-      >
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[20px]">
-          <img src={coverProyect1} />
-        </div>
-        <p className="w-full text-[28px] font-medium mt-2 text-start">
-          {t("proyect1")}
-        </p>
-        <p className="text-[16px] font-light">{t("proyect1_des")}</p>
-        <ul className="w-full flex gap-4 mt-7 mb-5">
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={android} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={node} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={java} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={firebase} alt="" />
-          </li>
-        </ul>
-      </section>
+    <div className="text-[#fff] grid-rows-9 justify-start gap-2 mt-20">
+      {/* Titulo */}
+      <p className="text-[28px] font-medium mt-2 text-start">
+        {t("title_body")}
+      </p>
 
-      <section
-        data-aos="fade-up-left"
-        data-aos-duration="2500"
-        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
-      >
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[20px]">
-          <img src={coverProyect2} />
-        </div>
-        <p className="w-full text-[28px] font-medium mt-2 text-start">
-          {t("proyect2")}
-        </p>
-        <p className="text-[16px] font-light">{t("proyect2_des")}</p>
-        <ul className="w-full flex gap-4 mt-7 mb-5">
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={android} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={java} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={sqlLite} alt="" />
-          </li>
-        </ul>
-      </section>
+      {/* Proyectos */}
+      <ul className="flex w-auto mx-10 mt-5 flex-col">
+        {/* Proyecto N° 1 */}
+        <section className="flex w-full justify-between hover:border-y-[.5px] py-3 transition-all duration-200  border-white">
+          <div>
+            <p className="text-[20px] font-medium mt-2 text-start">
+              {t("proyect9")}
+            </p>
+            <ul className="flex gap-4 text-[#8D95A6] font-light">
+              <li>VS Code</li>
+              <li>React Native</li>
+              <li>JavaScript</li>
+              <li>CSS3</li>
+              <li>Expo</li>
+              <li>Firebase RealTime DataBase</li>
+            </ul>
+          </div>
+          <button className="flex justify-center items-center text-[13px] gap-5 hover:opacity-80">
+            {t("see_more")}
+            <img src={icon_flecha} alt="Flecha" />
+          </button>
+        </section>
 
-      <section
-        data-aos="fade-up-right"
-        data-aos-duration="2300"
-        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
-      >
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px] relative">
-          <img src={coverProyect3} />
-          <li className="flex items-center absolute top-5 right-5">
-            <img src={privado} alt="Pagina Web Privada" className="w-[30px]" />
-          </li>
-        </div>
-        <p className="w-full text-[28px] font-medium mt-2 text-start">
-          {t("proyect3")}
-        </p>
-        <p className="text-[16px] font-light">{t("proyect3_des")}</p>
-        <ul className="w-full flex gap-4 mt-7 mb-5">
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={visual} alt="Visual Studio Code" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={react} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={tailwind} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={javascript} alt="" className="w-[35px]" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={node} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={mongodb} alt="" />
-          </li>
-        </ul>
-      </section>
+        {/* Proyecto N° 2 */}
+        <section className="flex w-full justify-between hover:border-y-[.5px] py-3 transition-all duration-200  border-white">
+          <div>
+            <p className="text-[20px] font-medium mt-2 text-start">
+              {t("proyect1")}
+            </p>
+            <ul className="flex gap-4 text-[#8D95A6] font-light">
+              <li>Android Studio</li>
+              <li>Java</li>
+              <li>Node.js</li>
+              <li>Firebase RealTime DataBase</li>
+            </ul>
+          </div>
+          <button className="flex justify-center items-center text-[13px] gap-5 hover:opacity-80">
+            {t("see_more")}
+            <img src={icon_flecha} alt="Flecha" />
+          </button>
+        </section>
 
-      <section
-        data-aos="fade-up-left"
-        data-aos-duration="2500"
-        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
-      >
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[20px]">
-          <img src={coverProyect4} />
-        </div>
-        <p className="w-full text-[28px] font-medium mt-2 text-start">
-          {t("proyect4")}
-        </p>
-        <p className="text-[16px] font-light">{t("proyect4_des")}</p>
-        <ul className="w-full flex gap-4 mt-7 mb-5">
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={microsoftvs} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={c} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={netFramework} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={microsoftSql} alt="" />
-          </li>
-        </ul>
-      </section>
+        {/* Proyecto N° 3 */}
+        <section className="flex w-full justify-between hover:border-y-[.5px] py-3 transition-all duration-200  border-white">
+          <div>
+            <p className="text-[20px] font-medium mt-2 text-start">
+              {t("proyect2")}
+            </p>
+            <ul className="flex gap-4 text-[#8D95A6] font-light">
+              <li>Android Studio</li>
+              <li>Java</li>
+              <li>SQLite</li>
+            </ul>
+          </div>
+          <button className="flex justify-center items-center text-[13px] gap-5 hover:opacity-80">
+            {t("see_more")}
+            <img src={icon_flecha} alt="Flecha" />
+          </button>
+        </section>
 
-      <section
-        data-aos="fade-up-right"
-        data-aos-duration="2300"
-        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
-      >
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px] relative">
-          <img src={coverProyect5} />
-          <li className="flex items-center absolute top-5 right-5">
-            <a
-              href="https://barberia-shop.vercel.app/"
-              target="_blank"
-              className="flex gap-2 font-light text-[#A6A6A6]"
-            >
-              {t("visit")}<img src={flecha} alt="" />
-            </a>
-          </li>
-        </div>
-        <p className="w-full text-[28px] font-medium mt-2 text-start">
-          {t("proyect5")}
-        </p>
-        <p className="text-[16px] font-light">{t("proyect5_des")}</p>
-        <ul className="w-full flex gap-4 mt-7 mb-5">
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={visual} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={react} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={javascript} alt="" className="w-[35px]" />
-          </li>
+        {/* Proyecto N° 4 */}
+        <section className="flex w-full justify-between hover:border-y-[.5px] py-3 transition-all duration-200  border-white">
+          <div>
+            <p className="text-[20px] font-medium mt-2 text-start">
+              {t("proyect4")}
+            </p>
+            <ul className="flex gap-4 text-[#8D95A6] font-light">
+              <li>Visual Studio</li>
+              <li>C#</li>
+              <li>.NET</li>
+              <li>SQL Server</li>
+            </ul>
+          </div>
+          <button className="flex justify-center items-center text-[13px] gap-5 hover:opacity-80">
+            {t("see_more")}
+            <img src={icon_flecha} alt="Flecha" />
+          </button>
+        </section>
 
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={tailwind} alt="" />
-          </li>
-          <li className="hover:scale-105 overflow-hidden hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={vite} alt="" />
-          </li>
-        </ul>
-      </section>
+        {/* Proyecto N° 5 */}
+        <section className="flex w-full justify-between hover:border-y-[.5px] py-3 transition-all duration-200  border-white">
+          <div>
+            <p className="text-[20px] font-medium mt-2 text-start">
+              {t("proyect5")}
+            </p>
+            <ul className="flex gap-4 text-[#8D95A6] font-light">
+              <li>VS Code</li>
+              <li>React JS</li>
+              <li>JavaScript</li>
+              <li>Tailwind CSS</li>
+              <li>Vercel</li>
+            </ul>
+          </div>
+          <button className="flex justify-center items-center text-[13px] gap-5 hover:opacity-80">
+            {t("see_more")}
+            <img src={icon_flecha} alt="Flecha" />
+          </button>
+        </section>
 
-      <section
-        data-aos="fade-up-left"
-        data-aos-duration="2500"
-        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
-      >
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px]">
-          <img src={coverProyect6} />
-        </div>
-        <p className="w-full text-[28px] font-medium mt-2 text-start">
-          {t("proyect6")}
-        </p>
-        <p className="text-[16px] font-light">{t("proyect6_des")}</p>
-        <ul className="w-full flex gap-4 mt-7 mb-5">
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={visual} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={angular} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={typescript} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={tailwind} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={node} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={mongodb} alt="" />
-          </li>
-        </ul>
-      </section>
+        {/* Proyecto N° 6 */}
+        <section className="flex w-full justify-between hover:border-y-[.5px] py-3 transition-all duration-200  border-white">
+          <div>
+            <p className="text-[20px] font-medium mt-2 text-start">
+              {t("proyect8")}
+            </p>
+            <ul className="flex gap-4 text-[#8D95A6] font-light">
+              <li>VS Code</li>
+              <li>React JS</li>
+              <li>JavaScript</li>
+              <li>Tailwind CSS</li>
+              <li>Vercel</li>
+              <li>Firebase RealTime DataBase</li>
+            </ul>
+          </div>
+          <button className="flex justify-center items-center text-[13px] gap-5 hover:opacity-80">
+            {t("see_more")}
+            <img src={icon_flecha} alt="Flecha" />
+          </button>
+        </section>
 
-      <section
-        data-aos="fade-up-right"
-        data-aos-duration="2300"
-        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
-      >
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px] relative">
-          <img src={coverProyect7} />
-          <li className="flex items-center absolute top-5 right-5">
-            <img src={privado} alt="Pagina Web Privada" className="w-[30px]" />
-          </li>
-        </div>
-        <p className="w-full text-[28px] font-medium mt-2 text-start">
-          {t("proyect7")}
-        </p>
-        <p className="text-[16px] font-light">{t("proyect7_des")}</p>
-        <ul className="w-full flex gap-4 mt-7 mb-5">
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={visual} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={react} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={javascript} alt="" className="w-[35px]" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={tailwind} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={node} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={mongodb} alt="" />
-          </li>
-        </ul>
-      </section>
-      
-      <section
-        data-aos="fade-up-right"
-        data-aos-duration="2300"
-        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
-      >
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px] relative">
-          <img src={coverProyect8} />
-          <li className="flex items-center absolute top-5 right-5">
-            <a
-              href="https://mayikh.vercel.app/"
-              target="_blank"
-              className="flex gap-2 font-light text-[#A6A6A6]"
-            >
-              {t("visit")}<img src={flecha} alt="" />
-            </a>
-          </li>
-        </div>
-        <p className="w-full text-[28px] font-medium mt-2 text-start">
-          {t("proyect8")}
-        </p>
-        <p className="text-[16px] font-light">{t("proyect8_des")}</p>
-        <ul className="w-full flex gap-4 mt-7 mb-5">
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={visual} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={react} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={javascript} alt="" className="w-[35px]" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={tailwind} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={firebase} alt="" />
-          </li>
-        </ul>
-      </section>
-      
-      <section
-        data-aos="fade-up-right"
-        data-aos-duration="2300"
-        className="max-w-[600px] bg-[#ffffff1a] flex flex-col items-center rounded-[20px] m-3 px-[20px] py-[20px]"
-      >
-        <div className="bg-[#ffffff0c] rounded-[20px] max-w-[550px] flex justify-center items-center px-[20px] pt-[83px] relative">
-          <img src={coverProyect9} />
-          <li className="flex items-center absolute top-5 right-5">
-            <a
-              href="https://expo.dev/accounts/kennethdr/projects/react-native-app/builds/13d3b310-76db-40cf-8a42-a46e617aefff"
-              target="_blank"
-              className="flex gap-2 font-light text-[#A6A6A6]"
-            >
-              APK <img src={flecha} alt="" />
-            </a>
-          </li>
-        </div>
-        <p className="w-full text-[28px] font-medium mt-2 text-start">
-          {t("proyect9")}
-        </p>
-        <p className="text-[16px] font-light">{t("proyect9_des")}</p>
-        <ul className="w-full flex gap-4 mt-7 mb-5">
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={visual} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={react} alt="" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={javascript} alt="" className="w-[35px]" />
-          </li>
-          <li className="hover:scale-105 hover:rotate-3 w-[50px] h-[50px] flex justify-center items-center border rounded-[50px] border-[#868686]">
-            <img src={firebase} alt="" />
-          </li>
-        </ul>
-      </section>
+        {/* Proyecto N° 7 */}
+        <section className="flex w-full justify-between hover:border-y-[.5px] py-3 transition-all duration-200  border-white">
+          <div>
+            <p className="text-[20px] font-medium mt-2 text-start">
+              {t("proyect3")}
+            </p>
+            <ul className="flex gap-4 text-[#8D95A6] font-light">
+              <li>VS Code</li>
+              <li>React JS</li>
+              <li>Next JS</li>
+              <li>JavaScript</li>
+              <li>Tailwind CSS</li>
+              <li>Node JS</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <button className="flex justify-center items-center text-[13px] gap-5 hover:opacity-80">
+            {t("see_more")}
+            <img src={icon_flecha} alt="Flecha" />
+          </button>
+        </section>
+
+        {/* Proyecto N° 8 */}
+        <section className="flex w-full justify-between hover:border-y-[.5px] py-3 transition-all duration-200  border-white">
+          <div>
+            <p className="text-[20px] font-medium mt-2 text-start">
+              {t("proyect6")}
+            </p>
+            <ul className="flex gap-4 text-[#8D95A6] font-light">
+              <li>VS Code</li>
+              <li>Angular</li>
+              <li>TypeScript</li>
+              <li>Tailwind CSS</li>
+              <li>Node JS</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <button className="flex justify-center items-center text-[13px] gap-5 hover:opacity-80">
+            {t("see_more")}
+            <img src={icon_flecha} alt="Flecha" />
+          </button>
+        </section>
+
+        {/* Proyecto N° 9 */}
+        <section className="flex w-full justify-between hover:border-y-[.5px] py-3 transition-all duration-200  border-white">
+          <div>
+            <p className="text-[20px] font-medium mt-2 text-start">
+              {t("proyect7")}
+            </p>
+            <ul className="flex gap-4 text-[#8D95A6] font-light">
+              <li>VS Code</li>
+              <li>React JS</li>
+              <li>Next JS</li>
+              <li>JavaScript</li>
+              <li>Tailwind CSS</li>
+              <li>Node JS</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <button className="flex justify-center items-center text-[13px] gap-5 hover:opacity-80">
+            {t("see_more")}
+            <img src={icon_flecha} alt="Flecha" />
+          </button>
+        </section>
+      </ul>
     </div>
   );
 }
